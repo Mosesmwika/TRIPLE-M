@@ -1,0 +1,96 @@
+#include<stdio.h> //for standard input output functions
+int main(){
+int fd; //file descriptor
+char buffer[100]; //buffer for reading and writing data
+size_t num_bytes_read,num_bytes_written; //number for bytes read and written
+// open a file named "output.txt" in write mode with read-write permissions
+fd=open ("otput.txt",O_RDWR O_CREAT,S_TRUSR S_TWUSR);
+if(fd<0){
+perror("open");
+exit(1);
+}
+//write "Hello World"to the file
+num_bytes_written write(fd,"Hello World",11);
+if(num_bytes_written<0){
+perror("write");
+exit(1);
+// move the file cursor to the begginning of the file
+lseek(fd,o,SEEK_SET);
+// read the content of the file into the buffer
+num/bytes/
+read=read(fd,buffer,sizeof(buffer);
+if(num_bytes_read<0){
+perror("read");
+exit(1);
+}
+//null-terminate the buffer to treat it as a string buffer[num_bytes_read+'/0';
+// print the read content
+printf("content read from the file:%s/n",buffer;
+//close the file
+close(fd);
+return 0;
+
+
+
+QUESTION 3
+#!/bin/bash
+#read the user input
+echo "enter u"
+read u
+echo "the unit consumed by the customer is $u"
+echo
+if[$u -lt 199 -o $u -eq 199];then
+echo "the charges per unit is 120"
+elif [$u -eq 200 -a $u -lt 400];then
+echo "the charges per unit is 150"
+elif [$u -eq 400 -a $u -lt 600];then
+echo "the charges per unit is 180"
+else 
+echo "the charges per unit is 200"
+fi
+total bill(){
+total bill=$u*the charge per unit
+echo "bill is $total bill"
+}
+total bill
+
+
+QUESTION 2
+
+#!/bin/bash
+#read the input output
+echo "enter employee_name"
+read employee_name
+echo "the employee name is $employee_name"
+echo
+echo "enter hours_worked"
+read hours_worked
+echo "the hours worked is $hours_worked"
+echo
+echo "enter rate_per_hour"
+read rate_per_hour
+echo "the rate per hour is $rate_per_hour"
+echo
+#calculating the basic salary
+basic_salary{
+basic_salary=$hours_worked*$rate_per_hour
+}
+basic_salary
+#using if...else statement
+if[basic_salary -gt 7000];then
+echo "25% of basic_salary"
+elif[basic_salary -eq -o -gt 15000 -a basic_salary -lt 70000];then
+echo "15% of basic_salary"
+else
+echo "NO tax"
+#calculating the net_pay
+net_pay{
+net_pay=$basic_pay-tax
+}
+net_pay
+
+
+
+
+
+
